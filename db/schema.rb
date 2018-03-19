@@ -21,9 +21,9 @@ ActiveRecord::Schema.define(version: 20180316020106) do
     t.string "session_token", null: false
     t.string "first_name", null: false
     t.string "last_name", null: false
-    t.integer "store_id"
-    t.boolean "admin"
-    t.boolean "god_admin"
+    t.integer "store_id", null: false
+    t.boolean "admin", default: false, null: false
+    t.boolean "god_admin", default: false, null: false
     t.index ["store_id"], name: "index_users_on_store_id"
   end
 
