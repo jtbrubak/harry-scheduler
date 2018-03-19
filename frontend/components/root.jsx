@@ -19,14 +19,14 @@ const Root = ({ store }) => {
   const _redirectIfLoggedIn = (nextState, replace) => {
     const currentUser = store.getState().session.currentUser;
     if (currentUser) {
-      replace('/browse/artists');
+      replace('/main');
     }
   }
 
   const _redirect = (nextState, replace) => {
     const currentUser = store.getState().session.currentUser;
     if (currentUser) {
-      replace('/browse/artists');
+      replace('/main');
     } else {
       replace('/login');
     }
