@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Store.destroy_all
+Store.create({ name: 'Tate St.' })
+
+User.destroy_all
+User.create({ username: 'hm77367', password: 'balldroid69', first_name: 'Harry', last_name: 'Miller', admin: true, god_admin: true, store: Store.find_by({ name: 'Tate St.'}) })
