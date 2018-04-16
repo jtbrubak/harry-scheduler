@@ -15100,6 +15100,7 @@ document.addEventListener('DOMContentLoaded', function () {
   if (window.currentUser) {
     var preloadedState = { session: { currentUser: window.currentUser } };
     store = (0, _store2.default)(preloadedState);
+    delete window.currentUser;
   } else {
     store = (0, _store2.default)();
   }
