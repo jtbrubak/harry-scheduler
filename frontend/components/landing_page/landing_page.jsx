@@ -5,8 +5,12 @@ class LandingPage extends React.Component {
     super(props);
   }
 
+  componentWillMount() {
+    this.props.fetchCurrentSchedule(this.props.currentUser.store_id);
+  }
+
   render() {
-    return <p>WHAT UP</p>;
+    return <p>TODAYS SCHEDULE</p>;
   }
 }
 
